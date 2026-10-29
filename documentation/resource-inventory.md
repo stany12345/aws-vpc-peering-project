@@ -1,30 +1,30 @@
-AWS VPC Peering — Resource Inventory
+# AWS VPC Peering — Resource Inventory
 
-1. Project Overview
+## 1. Project Overview
 
-| Property               | Details                                 |
-|------------------------|-----------------------------------------|
-| Project Name           | AWS VPC Peering                         |
-| Cloud Provider         | Amazon Web Services (AWS)               |
-| AWS Region             | Asia Pacific (Mumbai) — ap-south-1      |
-| VPC A                  | ewb-vpc-a                               |
-| VPC B                  | `wb-vpc-b                               |
-| Peering Connection     | ewb-a-b-peer                            |
-| Connectivity           | Private IPv4 communication between VPCs |
-| Administrative Access  | SSH through a bastion host              |
+| Property | Details |
+|---|---|
+| Project Name | AWS VPC Peering |
+| Cloud Provider | Amazon Web Services (AWS) |
+| AWS Region | Asia Pacific (Mumbai) — `ap-south-1` |
+| VPC A | `ewb-vpc-a` |
+| VPC B | `ewb-vpc-b` |
+| Peering Connection | `ewb-a-b-peer` |
+| Connectivity | Private IPv4 communication between VPCs |
+| Administrative Access | SSH through a bastion host |
 
 This document provides an inventory of the AWS resources used in the VPC peering project. Resource IDs and configuration details should be verified against the AWS Management Console before final submission.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+---
 
- 2. VPC Inventory
+## 2. VPC Inventory
 
-| Resource | Name      | Resource ID            | IPv4 CIDR    |
-|----------|-----------|------------------------|--------------|
-| VPC A    | ewb-vpc-a | vpc-08092d12e8b63a296` | 10.10.0.0/16 |
-| VPC B    | ewb-vpc-b | vpc-0cabf8113fbdd7d46` | 10.20.0.0/16 |
+| Resource | Name | Resource ID | IPv4 CIDR |
+|---|---|---|---|
+| VPC A | `ewb-vpc-a` | `vpc-08092d12e8b63a296` | `10.10.0.0/16` |
+| VPC B | `ewb-vpc-b` | `vpc-0cabf8113fbdd7d46` | `10.20.0.0/16` |
 
-VPC Configuration
+### VPC Configuration
 
 - Both VPCs use non-overlapping IPv4 CIDR ranges.
 - VPC A contains a public subnet and a private subnet.
@@ -34,13 +34,13 @@ VPC Configuration
 
 ---
 
-3. Subnet Inventory
+## 3. Subnet Inventory
 
 | VPC | Subnet Name | IPv4 CIDR | Purpose |
 |---|---|---|---|
-| VPC A | ewb-a-public | 10.10.1.0/24 | Bastion host |
-| VPC A | ewb-a-private | 10.10.2.0/24 | App-A |
-| VPC B | ewb-b-private | 10.20.1.0/24 | App-B |
+| VPC A | `ewb-a-public` | `10.10.1.0/24` | Bastion host |
+| VPC A | `ewb-a-private` | `10.10.2.0/24` | App-A |
+| VPC B | `ewb-b-private` | `10.20.1.0/24` | App-B |
 
 ### Subnet Resource IDs
 
